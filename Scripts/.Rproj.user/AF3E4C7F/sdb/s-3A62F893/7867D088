@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"003 - Reading a tab l,delimited text file\"\nauthor: \"by Craig W. Slinkman\"\ndate: \"September 1, 2015\"\noutput: html_document\n---\n\n# R: Reading a tab delimited text file with R\n\nA tab delimited text file is a file where the columns between variable names are separated by the tab character which is denoted by \"\\t\" in R.  If you double click on the data folder in the files directory you will find a file $06-natural_gas.txt$.  Double click on this file and it will be opened in the editor with a new edit window.\n\n## The read.table command\n\n### Dewsctiption\nReads a file in table format and creates a data frame from it, with cases corresponding to lines and variables to fields in the file.\n\n### Useage\n\nread.table(file, header = FALSE, sep = \"\\t\" )\n\n### Example\n\n```{r,readTable}\n\nrm( list=ls())          # Clear envirponment\n\nwd   <-  getwd()                        # Get workining directory\nfile <- \"06_natural_gas.txt\"            # Specify file to be read\npath <- file.path( wd, \"data\", file )   # Complete path to file\n\nNaturalGas <- read.table( path,         # Path and file name.\n                          header=TRUE,  # File contains a header giving variable names\n                          sep=\"\\t\" )    # Data is serperated by tabs\n\nhead( NaturalGas )                      # Show first 6 rows\ntail( NaturalGas )                      # and last 7 rows\n\n\n```\n\n",
+    "created" : 1441141811509.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2277837585",
+    "id" : "7867D088",
+    "lastKnownWriteTime" : 1441143036,
+    "path" : "C:/Users/Craig/utaBSTAT3322/Scripts/003 - Reading a tab delimited text file.Rmd",
+    "project_path" : "003 - Reading a tab delimited text file.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
